@@ -33,6 +33,10 @@ def findResult(keywords):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    global cluster
+    cluster = pymongo.MongoClient(
+        'mongodb+srv://satyam:12345679@aidb.ftppu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+        )
     # if the form is submitted
     grant, case_study = [], []
     if request.method == "POST":
@@ -56,9 +60,4 @@ def home():
 
 if __name__ == "__main__":
     # connecting with mongo db
-    global cluster
-    cluster = pymongo.MongoClient(
-        'mongodb+srv://satyam:12345679@aidb.ftppu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-        )
-
     app.run()
