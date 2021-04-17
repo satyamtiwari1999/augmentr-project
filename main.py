@@ -35,7 +35,7 @@ def findResult(keywords):
 def home():
     global cluster
     cluster = pymongo.MongoClient(
-        'mongodb+srv://satyam:12345679@aidb.ftppu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+        'mongodb+srv://satyam:{password}@aidb.ftppu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
         )
     # if the form is submitted
     grant, case_study = [], []
