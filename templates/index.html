@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <title>AugmentrAi Searching App</title>
+</head>
+<body>
+    <!-- Header -->
+    <div>
+        <ul class="top">
+            <li class="left_container"> AugmentrAi Project App</li>
+            <li class="right_container">
+                <a href="#"><img src="{{ url_for('static', filename='git_logo.png') }}" alt="Github Logo"><p>Github Link<p></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Form to take input keywords -->
+    <div class="form_outer_container">
+        <div class="form_inner_container">
+            <form action="/" method="post">
+                <input type="text" name="seach_bar" id="search_bar" placeholder="Keywords">
+                <button type="submit">Search In Database</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Found Content -->
+    <div class="grant_found_keys">
+        {% if len_grant%}
+            <h1 style="color: #34006a; padding: 30px 0;">Result from Grants Collection</h1>
+        {% elif len_grant + len_case == 0 %}
+            <img style="margin-left:40%; height: 250px; width: 250px;"; src="{{url_for('static', filename='search.gif')}}" alt="">
+        {% endif%}
+        {% for title, summary in grant %}
+            <p class="title">{{title}}</p>
+            <hr style="color:#33006a3b">
+            <p class="summary">{{summary}}</p>
+        {% endfor %}
+    </div>
+
+    <div class="case_found_keys">
+        {% if len_case%}
+            <h1 style="color: #34006a; padding: 30px 0;">Result from Case Study Collection</h1>
+        {% endif%}
+        {% for title, link in case_study %}
+            <p class="title">{{title}}</p>
+            <hr>
+            <a href="{{ link }}"><p class="summary">Link to Destination Page</p></a>
+        {% endfor %}
+    </div>
+    <!-- Footer -->
+    <div class="form_area_image">
+        <ul class="footer">
+            <li>Satyam Tiwari</li>
+            <li>satyammtiwarii@gmail.com</li>
+            <li>+91-8750192989</li>
+        </ul>
+        <img src="{{ url_for('static', filename='flask_logo.png') }}" alt="">
+        <img src="{{ url_for('static', filename='mongo-logo.png') }}" alt="">
+    </div>
+</body>
+</html>

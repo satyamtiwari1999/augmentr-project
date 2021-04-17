@@ -1,0 +1,163 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Dela Gothic One', cursive; */
+    font-family: cursive;
+    outline: none;
+}
+body
+{
+    background-color: white;
+    /* background-color: #34006a; */
+}
+/* editing header */
+.top
+{
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    color: White;
+    float: left;
+    background-color: #34006a;
+    padding: 10px;
+}
+li
+{
+    list-style: None;
+    /* display: inline; */
+    float: left;
+}
+.left_container
+{
+    width: 60%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+    /* background-color: #fccfc7; */
+}
+.right_container
+{
+    width: 40%;
+    text-align: center;
+    height: 100px;
+}
+.right_container a img
+{
+    height: 100px;
+    float: left;
+}
+.right_container a p
+{
+    color: white;
+    float: left;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+/* Form Area */
+.form_outer_container
+{
+    width: 100%;
+    padding-top: 180px;
+    text-align: center;
+    background-color: white;
+    
+}
+.form_inner_container
+{
+    /* opacity: 0.5; */
+    /* background-color: white; */
+    width: 60%;
+    display: inline-block;
+    padding-bottom: 50px;
+}
+
+input
+{
+    width: 80%;
+    text-align: center;
+    line-height: 30px;
+
+    border: #34006a 0.5px solid;
+    color: #34006a;
+    border-radius: 20px;
+}
+button
+{
+    line-height: 30px;
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 20px;
+
+    color: white;
+    border: #34006a 1px solid;
+    background-color: #34006a;
+}
+
+.form_area_image
+{
+    /* height: 00px; */
+    width: 90%  ;
+    display: block;
+    position:relative;
+    float: left;
+    bottom: 0%;
+}
+
+.form_area_image img
+{
+    height: 80px;
+    float:right;
+    padding: 30px;
+}
+
+.footer
+{
+    font-size: 20px;
+    float: left;
+    width: 30%;
+    padding-left: 150px;
+    /* border-right:#e0e0e0 1px solid; */
+}
+.footer li
+{
+    text-align: left;
+    margin : 2px;
+    padding-left: 20px;
+    line-height: 40px;
+    width: 100%;
+    /* display: inline-block; */
+    /* float: left; */
+}
+
+.grant_found_keys
+{
+    background-color: #7b16e715;
+    padding: 0px 150px;
+}
+.title
+{
+    font-size: 20px;
+    color: black;
+}
+.summary
+{
+    font-size: 15px;
+    color: #59595a;
+    padding-bottom: 30px;
+}
+
+.case_found_keys
+{
+    background-color: #7b16e715;
+    padding: 0px 150px;
+    margin-bottom: 30px;
+}
+hr
+{
+    margin: 3px 0;
+}
